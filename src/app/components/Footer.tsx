@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate, Link } from "react-router";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 
 export function Footer() {
@@ -8,6 +8,23 @@ export function Footer() {
     navigate(path);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const navLinks = [
+    { label: "Home", path: "/" },
+    { label: "Products", path: "/products" },
+    { label: "Services", path: "/services" },
+    { label: "Infrastructure", path: "/infrastructure" },
+    { label: "Customers", path: "/customers" },
+    { label: "Blog", path: "/blog" },
+    { label: "Contact", path: "/contact" },
+  ];
+
+  const specializationLinks = [
+    { label: "BHEL Turbine Retrofits", path: "/bhel-steam-turbine-governor-retrofits" },
+    { label: "Voith Hydraulic Systems", path: "/voith-hydraulic-troubleshooting-spares" },
+    { label: "RLA Studies", path: "/rla-studies-thermal-power-plants-bangalore" },
+    { label: "Long-Term Service Agreements", path: "/services/ltsa-amc-services" },
+  ];
 
   return (
     <footer className="bg-[#1A2A3A] text-white">
@@ -32,15 +49,7 @@ export function Footer() {
         <div>
           <h4 className="font-[var(--font-heading)] text-[12px] tracking-wider text-white/30 mb-4">NAVIGATION</h4>
           <div className="space-y-2">
-            {[
-              { label: "Home", path: "/" },
-              { label: "Products", path: "/products" },
-              { label: "Services", path: "/services" },
-              { label: "Infrastructure", path: "/infrastructure" },
-              { label: "Customers", path: "/customers" },
-              { label: "Blog", path: "/blog" },
-              { label: "Contact", path: "/contact" },
-            ].map((link) => (
+            {navLinks.map((link) => (
               <button
                 key={link.path}
                 onClick={() => handleNav(link.path)}
@@ -56,12 +65,7 @@ export function Footer() {
         <div>
           <h4 className="font-[var(--font-heading)] text-[12px] tracking-wider text-white/30 mb-4">SPECIALIZATIONS</h4>
           <div className="space-y-2">
-            {[
-              { label: "BHEL Turbine Retrofits", path: "/bhel-steam-turbine-governor-retrofits" },
-              { label: "Voith Hydraulic Systems", path: "/voith-hydraulic-troubleshooting-spares" },
-              { label: "RLA Studies", path: "/rla-studies-thermal-power-plants-bangalore" },
-              { label: "Long-Term Service Agreements", path: "/services/ltsa-amc-services" },
-            ].map((link) => (
+            {specializationLinks.map((link) => (
               <button
                 key={link.path}
                 onClick={() => handleNav(link.path)}

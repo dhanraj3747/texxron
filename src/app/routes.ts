@@ -4,6 +4,8 @@ import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ProductsIndexPage } from "./pages/ProductsIndexPage";
 import { ProductDetailPage } from "./pages/ProductDetailPage";
+import { SteamTurbinePage } from "./pages/SteamTurbinePage";
+import { HydraulicTurbinePage } from "./pages/HydraulicTurbinePage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { CapabilitiesPage } from "./pages/CapabilitiesPage";
 import { CustomersPage } from "./pages/CustomersPage";
@@ -23,6 +25,11 @@ export const router = createBrowserRouter([
       { index: true, Component: HomePage },
       { path: "about", Component: AboutPage },
       { path: "products", Component: ProductsIndexPage },
+
+      // SPECIFIC ROUTES: Must be BEFORE the products/:slug catch-all
+      { path: "products/steam-turbine-content", Component: SteamTurbinePage },
+      { path: "products/hydraulic-turbine-content", Component: HydraulicTurbinePage }, // ← MATCHES Header.tsx slug exactly
+
       { path: "products/:slug", Component: ProductDetailPage },
       { path: "services", Component: ServicesPage },
       { path: "services/:serviceSlug", Component: ServiceDetailPage },
@@ -30,15 +37,12 @@ export const router = createBrowserRouter([
       { path: "customers", Component: CustomersPage },
       { path: "blog", Component: BlogPage },
       { path: "contact", Component: ContactPage },
-      // Legacy routes (kept for backwards compatibility)
       { path: "expertise", Component: ServicesPage },
       { path: "capabilities", Component: CapabilitiesPage },
-      // SEO Silo Architecture - Long-tail landing pages
       { path: "bhel-steam-turbine-governor-retrofits", Component: BhelRetrofitsPage },
       { path: "voith-hydraulic-troubleshooting-spares", Component: VoithHydraulicPage },
       { path: "rla-studies-thermal-power-plants-bangalore", Component: RlaStudiesPage },
     ],
   },
-  // CMS Admin Dashboard
   { path: "/admin", Component: AdminPage },
 ]);

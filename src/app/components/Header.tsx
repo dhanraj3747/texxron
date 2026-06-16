@@ -20,8 +20,8 @@ const productCategories = [
       { name: "Servo Valve Assembly", slug: "servo-valve-assembly", icon: Box },
       { name: "Oil Distribution Block", slug: "oil-distribution-block", icon: Box },
       { name: "Position Feedback Transmitter", slug: "position-feedback-transmitter", icon: Radio },
-      { name: "Steam Turbine", slug: "position-feedback-transmitter", icon: Radio },
-      { name: "Hydrolic Turbine", slug: "position-feedback-transmitter", icon: Radio },
+      { name: "Steam Turbine", slug: "steam-turbine-content", icon: Radio },
+      { name: "Hydraulic Turbine", slug: "hydraulic-turbine-content", icon: Radio },
     ],
   },
 ];

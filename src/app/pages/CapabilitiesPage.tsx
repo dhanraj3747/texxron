@@ -7,7 +7,9 @@ import { FluidGallery } from "../components/ui/fluid-gallery";
 import { CubeCarousel } from "../components/ui/cube-carousel";
 
 // Real facility images from workspace assets
-
+import home6 from "../../../imageAssets/home6.jpeg";
+import home5 from "../../../imageAssets/home5.jpeg";
+import peenya3 from "../../../imageAssets/peenya3.jpeg";
 import assembledGovernorImg from "../../../imageAssets/peenya1.jpeg";
 import cadDesignImg from "../../../imageAssets/peenya2.jpeg";
 import hydraulicTestImg from "../../../imageAssets/peenya3.jpeg";
@@ -27,6 +29,7 @@ import key6 from "../../../imageAssets/key6.jpeg";
 
 
 
+
 const capabilityGalleryImages = [
   { src: assembledGovernorImg, alt: "Electronic Governor Control Panel Assembly", category: "Assembly", span: "wide" as const },
   { src: hydraulicTestImg, alt: "Hydraulic Testing Bench in Operation", category: "Testing" },
@@ -39,9 +42,9 @@ const capabilityGalleryImages = [
 
 const facilityAreas = [
   {
-    title: "In house facility",
+    title: "In-House Facility",
     icon: Wrench,
-    description: "Our Peenya Phase IV facility is equipped with state-of-the-art infrastructure for complete turbine services and component manufacturing.",
+    description: "",
     photos: [
       { directive: "Wide-angle view of the complete Peenya facility showing multiple work zones", fallback: "https://images.unsplash.com/photo-1738918937796-743064feefa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
       { directive: "Facility entrance and main operational areas", fallback: "https://images.unsplash.com/photo-1570086625762-7c1396540ac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
@@ -52,8 +55,8 @@ const facilityAreas = [
     icon: Box,
     description: "Advanced CNC machining center equipped for precision component manufacturing, from servo valve bodies to custom manifolds and actuators.",
     photos: [
-      { directive: "CNC machining center in operation with precision turbine components", fallback: "https://images.unsplash.com/photo-1701448149957-b96dbd1926ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
-      { directive: "Machined turbine components ready for assembly", fallback: "https://images.unsplash.com/photo-1720670996872-370771b91159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+      { directive: "CNC machining center in operation with precision turbine components", fallback: home6 },
+      { directive: "Machined turbine components ready for assembly", fallback: home5 },
     ],
   },
   {
@@ -61,7 +64,7 @@ const facilityAreas = [
     icon: Monitor,
     description: "State-of-the-art CAD lab with SolidWorks and AutoCAD workstations for 3D modeling, reverse-engineering, and technical documentation.",
     photos: [
-      { directive: "Engineer at dual-monitor workstation with turbine schematic open in SolidWorks", fallback: "https://images.unsplash.com/photo-1738918937796-743064feefa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+      { directive: "Engineer at dual-monitor workstation with turbine schematic open in SolidWorks", fallback: peenya3 },
     ],
   },
   {
